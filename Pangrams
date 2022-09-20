@@ -1,0 +1,9 @@
+def pangrams(s):
+    # Write your code here
+    if(len(set(s.lower()))==27):
+        return "pangram"
+    else:
+        return "not pangram"
+        
+        
+https://www.geeksforgeeks.org/python-set-method/
