@@ -7,3 +7,15 @@ def pangrams(s):
         
         
 https://www.geeksforgeeks.org/python-set-method/
+
+
+
+#Approach 2
+def pangrams(s):
+    # Write your code here
+    x = "abcdefghijklmnopqrstuvwxyz"
+    s = s.lower()
+    for i in x :
+        if i not in s:
+            return "not pangram"
+    return "pangram"
