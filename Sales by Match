@@ -1,0 +1,7 @@
+def sockMerchant(n, ar):
+    # Write your code here
+    x=set(ar)
+    odi = 0
+    for i in x:
+        odi += int(ar.count(i)/2)
+    return odi
