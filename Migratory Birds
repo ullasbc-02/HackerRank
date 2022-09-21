@@ -1,0 +1,7 @@
+def migratoryBirds(arr):
+    # Write your code here
+    lst = [0] * 6
+    x = set(arr)
+    for i in x:
+        lst[i] = arr.count(i)
+    return lst.index(max(lst))  // returns first max element occuring in the list
