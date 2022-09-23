@@ -1,0 +1,18 @@
+#Sliding Window Technique
+
+def birthday(s, d, m):
+    # Write your code here
+    total=sum(s[0:m])
+    count=0
+    j=0
+    if(total==d):
+        count+=1
+    for i in range(m,len(s)):
+        total+=s[i]
+        total-=s[j] #s[i-m]
+        j+=1
+        if(total==d):
+            count+=1
+    return count
+    
+    #Instead of using j variable we can use s[i-m] in the line #10
