@@ -1,0 +1,7 @@
+def twoArrays(k, A, B):
+    A.sort()
+    B.sort(reverse = True)
+    for i in range(n):
+        if A[i] + B[i] < k:
+            return "NO"
+    return "YES"
