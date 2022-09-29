@@ -28,3 +28,12 @@ def pageCount(n,p):
     forward_turns = int(p//2)
     backward_turns = int((n-p)//2)
     return min(forward_turns,backward_turns)
+    
+    
+    
+ def pageCount(n, p):
+    # Write your code here
+    n = n // 2
+    p = p // 2
+    
+    return min(n-p, p)
