@@ -1,0 +1,19 @@
+IF the (4,5,10) 9<=10 hence, degenerative triangle
+       (1,2,3) 3<=3
+       (2,3,5) 5<=5 
+       
+       
+If the (3,4,5) 7>=5 hence, degenerative triangle
+       (2,3,4) 5>=4
+       
+       
+def maximumPerimeterTriangle(sticks):
+    # Write your code here
+    sticks.sort()
+    i = len(sticks) - 3
+    while i>=0 and sticks[i]+sticks[i+1]<=sticks[i+2]:
+        i-=1
+    if i>=0:
+        return [sticks[i],sticks[i+1],sticks[i+2]]
+    else:
+        return [-1]
