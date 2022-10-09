@@ -1,0 +1,8 @@
+def kangaroo(x1, v1, x2, v2):
+    # Write your code here
+    if(x1==x2):
+        return "YES"
+    for i in range(2,10001):
+        if((x1+v1*i)==(x2+v2*i)):
+            return "YES"
+    return "NO"
