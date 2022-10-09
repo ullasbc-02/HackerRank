@@ -1,0 +1,18 @@
+def closestNumbers(arr):
+    # Write your code here
+    lst = []
+    arr.sort()
+    for i in range(0,len(arr)-1):
+        lst.append(abs(arr[i]-arr[i+1]))
+    mini=min(lst)
+    index=[]
+
+    for i in range(0,len(lst)):
+        if(mini==lst[i]):
+            index.append(i)
+    
+    lst.clear()
+    for i in index:
+        lst.append(arr[i])
+        lst.append(arr[i+1])
+    return lst
