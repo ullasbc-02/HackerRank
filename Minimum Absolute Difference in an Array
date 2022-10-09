@@ -1,0 +1,9 @@
+def minimumAbsoluteDifference(arr):
+    # Write your code here
+    arr.sort()
+    diff=[]
+    sub=arr[0]
+    for i in range(0,len(arr)-1):
+        diff.append(abs(arr[i]-arr[i+1]))
+    diff.append(abs(sub-arr[len(arr)-1]))
+    return min(diff)
