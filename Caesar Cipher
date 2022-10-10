@@ -1,0 +1,30 @@
+def caesarCipher(s, k):
+    str=""
+    alphabet = "abcdefghijklmnopqrstuvwxyz"
+    for i in s:
+        if (i.isupper()):
+            temp = alphabet.index(i.lower()) + k
+            str = str + alphabet[temp%26].upper()
+            continue
+        if(i not in alphabet):
+            str=str+i
+            continue
+        temp = alphabet.index(i) + k
+        str = str + alphabet[temp%26]
+    return str
+    
+    
+    ###########################
+    def caesarCipher(s, k):
+    # Write your code here
+    ret = []
+
+    for i in range(len(s)):
+        if (s[i].islower()):
+            ret.append(chr(97 + ((ord(s[i]) + k) - 97) % 26))
+        elif (s[i].isupper()):
+            ret.append(chr(65 + ((ord(s[i]) + k) - 65) % 26))
+        else:
+            ret.append(s[i])
+    
+    return "".join(ret)
