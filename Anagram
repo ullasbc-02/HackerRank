@@ -1,0 +1,13 @@
+from collections import Counter
+def anagram(s):
+    if len(s)%2==1:
+        return -1
+    else:
+        mid=len(s)//2
+        s1=s[:mid]
+        s2=s[mid:]
+        c1=Counter(s1) #creates dict and count the character
+        c2=Counter(s2)
+        c=c1-c2 #difference between dict
+        #print(c1-c2)    
+        return sum(c.values()) #dict[diff in dict]
