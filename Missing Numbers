@@ -1,0 +1,10 @@
+def missingNumbers(arr, brr):
+    # Write your code here
+    c1=Counter(arr)
+    c2=Counter(brr)
+    c = c2-c1
+    lst = []
+    for i in c:
+        lst.append(i)
+    lst.sort() #Sorts the list and no need of temp variable
+    return lst
