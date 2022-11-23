@@ -1,0 +1,9 @@
+def gridChallenge(grid):
+    sort_grid = [sorted(s) for s in grid]
+    for i in range(len(sort_grid[0])):
+        l = [s[i] for s in sort_grid]
+        print(l)
+        sl = sorted(l)
+        if sl != l:
+            return 'NO'
+    return 'YES'
