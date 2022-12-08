@@ -7,3 +7,5 @@ def sansaXor(arr):
         for idx in range(2,len(arr),2):
             result = result ^ arr[idx]
         return result
+
+#Occuring even number of times then the result is 0 i.e., a^a^a^a = 0
