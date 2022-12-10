@@ -1,0 +1,7 @@
+def maxMin(k, arr):
+    # Write your code here
+    arr.sort()
+    minDiff = arr[k-1]-arr[0]
+    for i in range(0,len(arr)-k-1):
+        minDiff = min(minDiff,arr[i+k-1]-arr[i])
+    return minDiff
